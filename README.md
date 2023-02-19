@@ -1,6 +1,6 @@
 # Laptop-Price-Predictor
 
-Project link: https://ankitbourasi0-laptop-price-predictor-app-tdxq33.streamlit.app/
+Project link: https://ankitbourasi0-laptop-price-predictor-app-83bnjx.streamlit.app/
 # Aim
 This project aims to predict the Price of laptop by taking it configuration like HDD, SSD, Processor, Ram, and other parameters.
 # How to use? 
