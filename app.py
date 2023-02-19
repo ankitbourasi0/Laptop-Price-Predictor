@@ -1,13 +1,27 @@
 import streamlit as st
 import numpy as np
 import pickle 
-
+import base64
 
 pipe = pickle.load(open('pipe.pkl','rb'))
 laptop = pickle.load(open('laptop.pkl','rb'))
 
 
-st.title("Laptop price predictor")
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2hpdGUlMjBhYnN0cmFjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+background-size: 100%;
+
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
+st.title(":grey[Laptop price predictor]")
+st.write('''Select the desired configuration to predict the price''')
 company = st.selectbox('Brand',laptop['Company'].unique())
 laptop_type = st.selectbox("Type",laptop["TypeName"].unique())
 ram = st.selectbox('Ram(in GB)',[2,4,6,8,12,16,24,32,64])
